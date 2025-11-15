@@ -14,7 +14,7 @@ void find_even(vector<int>nums){
 
 int main(){
  
-    vector<int>vec={6,77,432,67,-36,2,67,1000};
+    vector<int>vec={6,6,432,67,67,2,67,1000};
     find_even(vec);
    for(int i: vec){
     cout<<i<< " ";
