@@ -11,7 +11,6 @@ void find_even(vector<int>nums){
    
 }
 
-
 int main(){
  
     vector<int>vec={6,6,432,67,67,2,67,1000};

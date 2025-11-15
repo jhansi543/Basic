@@ -12,6 +12,7 @@ int find_pairs(vector<int>&nums){
     return count;
 }
 
+
 int main(){
     vector<int>vec(12);
     vec={2,3,34,55,55,55,7,6,6,8,3,3};
