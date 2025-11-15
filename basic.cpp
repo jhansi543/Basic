@@ -19,7 +19,7 @@ int main(){
    for(int i: vec){
     cout<<i<< " ";
    }
-    
+   
    return 0;
 
 }
