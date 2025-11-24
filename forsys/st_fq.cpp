@@ -12,4 +12,6 @@ int main(){
         cout<<vec[i]<<" ";
     }
 
+        
+   
 }
