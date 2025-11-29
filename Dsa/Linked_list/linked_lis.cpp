@@ -68,6 +68,61 @@ int find_data(node*&head,node*target){
     return -1;
 }
 
+void insert_at_kth_pos(node*&head,int k,int v){
+    node*newnode=new node(v);
+    node*t=head;
+    for(int i=0;i<k;i++){
+        t=t->next;
+    }
+    node*t2=t->next;
+    t->next=newnode;
+    newnode->next=t2;
+}
+
+void del_at_fitst(node*&head){
+    if(!head){
+        cout<<"canot del ";
+    }
+
+    if(!head->next){
+        head=nullptr;
+    }
+
+    head=head->next;
+    cout<<"deleted sucessfully start";
+}
+void del_at_end(node*&head){
+    if(!head){
+        cout<<"canot del ";
+    }
+    if(!head->next){
+        head=nullptr;
+    }
+    node*t=head;
+    while(t->next->next!=NULL&&t->next!=NULL){
+        t=t->next;
+    }
+    t->next=nullptr;
+    cout<<"deleted sucessfully end";
+}
+void del_at_kth_pos(node*&head ,int k){
+    if(!head){
+        cout<<"canot del ";
+    }
+    if(!head->next){
+        head=nullptr;
+    }
+    node*t=head;
+    for(int i=0;i<k-1;i++){
+        t=t->next;
+    }
+    t->next=t->next->next;
+    cout<<"deleted sucessfully kt pos";
+}
+
+
+
+
 int main(){
     node*head1=nullptr;
     node*head2=nullptr;
@@ -101,4 +156,21 @@ int main(){
     else{
         cout<<y;
     }
+
+    insert_at_kth_pos(head1,3,8);
+    desplay(head1);
+
+    del_at_fitst(head1);
+    desplay(head1);
+    cout<<"\n";
+    
+    del_at_end(head1);
+    cout<<"\n";
+    desplay(head1);
+    cout<<"\n";
+    del_at_kth_pos(head1,2);
+    cout<<"\n";
+    desplay(head1);
+
+
 }

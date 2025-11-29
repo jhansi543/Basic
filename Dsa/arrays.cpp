@@ -2,15 +2,26 @@
 using namespace std;
 int main(){
    
-    vector<int>qq={1,2,3,4,5};
-    int n=qq.size();
-    for(int i=0;i<n;i++){
-        if(qq[i]==44){
-            cout<<"ele found";
-            break;
+    vector<int>nums={1,2,3,4};
+    int c=0;
+    for(int i=0;i<nums.size();i++){
+        c+=nums[i];
+    }
+    cout<<c;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]%2==0){
+            cout<<nums[i]<<" ";
         }
     }
-    cout<<"ele not foun\n";
-    cout<<qq[n/2];
-   
+    cout<<endl;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]==4){
+            cout<<"4 found";
+            nums[i]=44;
+        }
+    }
+    for(int x:nums){
+        cout<<x<<" ";
+    }
+
 }
